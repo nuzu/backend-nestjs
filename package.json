@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node index",
     "test": "jest",
-    "git": "git add * & git commit -m"
+    "git": "git add * & git commit -m ",
+    "postgit": "git push -u origin master"
   },
   "keywords": [],
   "author": "Nizar A <niz.ismail@gmail.com>",
