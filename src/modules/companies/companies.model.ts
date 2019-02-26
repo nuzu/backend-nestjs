@@ -1,9 +1,9 @@
 export class Company {
-    name: string;
-    industry: string;
+  public name: string;
+  public industry: string;
 
-    constructor(name: string, industry: string) {
-        this.name = name;
-        this.industry = industry;
-    }
+  constructor(name: string, industry: string) {
+    this.name = name;
+    this.industry = industry;
+  }
 }

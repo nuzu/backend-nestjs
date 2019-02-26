@@ -1,19 +1,18 @@
-import {Controller, Get, Post, Body} from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { Company } from './companies.model';
 import { CompaniesService } from './companies.service';
 
 @Controller('companies')
 export class CompaniesController {
+  constructor(private readonly companiesService: CompaniesService) {}
 
-    constructor(private readonly companiesService: CompaniesService) {}
+  @Get()
+  public getCompanies() {
+    return this.companiesService.findAll();
+  }
 
-    @Get()
-    getCompanies() {
-        return this.companiesService.findAll();
-    }
-
-    @Post()
-    createCompany(@Body() company: Company) {
-        this.companiesService.create(company)
-    }
+  @Post()
+  public createCompany(@Body() company: Company) {
+    this.companiesService.create(company);
+  }
 }
